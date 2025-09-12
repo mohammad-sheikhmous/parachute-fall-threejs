@@ -3,6 +3,8 @@
 This project simulates a **parachute jump experience** using physics principles and real-world environmental factors.  
 It combines entertainment with scientific applications, allowing users to understand the dynamics of **free fall**, **air resistance**, **wind forces**, and **parachute deployment**.
 
+Live at https://parachute-fall-threejs.vercel.app/
+
 ---
 
 ## 🎯 Features
@@ -62,14 +64,14 @@ It combines entertainment with scientific applications, allowing users to unders
 
 ## 🛠️ Technologies Used
 
-- **Three.js** → Rendering the 3D environment  
+- [Three.js](https://threejs.org/) → Rendering the 3D environment  
 - **Blender + GIS** → Terrain modeling from Google Maps (Italian countryside with buildings & roads)  
-- **Sky Shader (Three.js)** → Realistic atmospheric skybox with sun & lighting simulation  
+- [Sky Shader (Three.js)](https://threejs.org/docs/?q=Sky#examples/en/objects/Sky) → Realistic atmospheric skybox with sun & lighting simulation  
 - **Custom Cloud Shader** → Dynamic clouds with adjustable density & coverage  
 - **3D Models** → Airplane, parachute, and skydiver models  
 - **Mixamo + Blender** → Animations for skydiver movements, processed & sequenced  
-- **Raycaster (Three.js)** → Collision detection for head, hands, and feet with terrain  
-- **Sound Effects** → Immersive audio for realism  
+- [Raycaster (Three.js)](https://threejs.org/docs/#api/en/core/Raycaster) → Collision detection for head, hands, and feet with terrain  
+- [Sound Effects from Pixabay](https://pixabay.com/) → Immersive audio for realism  
 
 ---
 
@@ -87,9 +89,6 @@ It combines entertainment with scientific applications, allowing users to unders
 
 # Project Setup Guide
 
-This project uses **Git LFS (Large File Storage)** to handle large files (e.g., backups, media, datasets).  
-Please make sure you follow these steps to clone and set up the project correctly.
-
 ## 🚀 Cloning the Repository
 
 1. Clone the repository:
@@ -97,30 +96,7 @@ Please make sure you follow these steps to clone and set up the project correctl
    git clone https://github.com/mohammad-sheikhmous/parachute-fall-threejs.git
    cd parachute-fall-threejs
 
-2. Install Git LFS (only the first time on your machine):
-
-
- - Windows: https://git-lfs.com/
-
- - Linux (Ubuntu/Debian):
-    ```bash
-    sudo apt-get install git-lfs
-
- - macOS (Homebrew):
-    ```bash
-    brew install git-lfs
----
-
-3. Initialize Git LFS:
-    ```bash
-    git lfs install
-
-4. Pull large files managed by Git LFS:
-    ```bash
-    git lfs pull
-
-
-## Install Dependencies
+2. Install Dependencies
 
 Download [Node.js](https://nodejs.org/en/download/).
 Run this followed commands:
@@ -139,3 +115,11 @@ npm run dev
 - **Ghalia Sbei** – [GitHub](https://github.com/ghalia-sbei)
 - **Judy Shakhashiro** – [GitHub](https://github.com/Judy-shakhashiro)
 - **Mohammad Sheikhmous** – [GitHub](https://github.com/mohammad-sheikhmous)
+
+---
+
+## 📜 License
+
+MIT License – Free for learning, teaching, and exploration.
+
+---
