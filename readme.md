@@ -3,7 +3,7 @@
 This project simulates a **parachute jump experience** using physics principles and real-world environmental factors.  
 It combines entertainment with scientific applications, allowing users to understand the dynamics of **free fall**, **air resistance**, **wind forces**, and **parachute deployment**.
 
-Live at https://parachute-fall-threejs.vercel.app/
+Live at https://parachute-fall-threejs.vercel.app/ (Under Proccessing)
 
 ---
 
@@ -69,7 +69,7 @@ Live at https://parachute-fall-threejs.vercel.app/
 - [Sky Shader (Three.js)](https://threejs.org/docs/?q=Sky#examples/en/objects/Sky) → Realistic atmospheric skybox with sun & lighting simulation  
 - **Custom Cloud Shader** → Dynamic clouds with adjustable density & coverage  
 - **3D Models** → Airplane, parachute, and skydiver models  
-- **Mixamo + Blender** → Animations for skydiver movements, processed & sequenced  
+- **[Mixamo](https://www.mixamo.com/) + Blender** → Animations for skydiver movements, processed & sequenced  
 - [Raycaster (Three.js)](https://threejs.org/docs/#api/en/core/Raycaster) → Collision detection for head, hands, and feet with terrain  
 - [Sound Effects from Pixabay](https://pixabay.com/) → Immersive audio for realism  
 
