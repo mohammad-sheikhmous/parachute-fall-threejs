@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parachutist Simulation</title>
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js",
+            "three/examples/jsm/controls/OrbitControls.js": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/controls/OrbitControls.js",
+            "three/examples/jsm/loaders/GLTFLoader.js": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/loaders/GLTFLoader.js",
+            "three/examples/jsm/loaders/DRACOLoader.js": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/loaders/DRACOLoader.js",
+            "three/addons/objects/Sky.js": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/objects/Sky.js"
+          }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 80vh;
+        }
+
+        #dashboard {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            max-height: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 1px;
+        }
+
+        .param-group {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.82rem;
+            gap: 1px;
+        }
+
+        .param-label {
+            font-weight: 500;
+        }
+
+        .value-display {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas class="webgl"></canvas>
+    <div id="dashboard">
+
+        <div>
+            <div class="section-title">Real-time Data</div>
+            <div class="param-group text-sm">
+                <div>
+                    <p>Elapsed Time Since Jumping: <span id="elapsedTime" class="value-display">0.00</span> s</p>
+                    <span class="param-label">Vertical:</span>
+                    <p>Velocity: <span id="verticalVelocity" class="value-display">0.00</span> m/s</p>
+                    <p>Acceleration: <span id="verticalAcceleration" class="value-display">0.0000</span> m/s²</p>
+                    <p>Position: <span id="verticalPosition" class="value-display">0 .00</span> m</p>
+                    <p>Weight: <span id="weight" class="value-display">0.00</span> N</p>
+                    <p>Vertical Air Resistance: <span id="verticalAirResestance" class="value-display">0.00</span> N</p>
+                </div>
+                <div>
+                    <span class="param-label">Horizontal X:</span>
+                    <p>Velocity: <span id="horizontalVelocity" class="value-display">-0.10</span> m/s</p>
+                    <p>Acceleration: <span id="horizontalAcceleration" class="value-display">0.0000</span> m/s²</p>
+                    <p>Position: <span id="horizontalPosition" class="value-display">0.00</span> m</p>
+                    <p>Horizontal Air Resistance: <span id="horizontalAirResistance" class="value-display">0.00</span> N
+                    </p>
+                    <p>Wind Force: <span id="windForce" class="value-display">0.00</span> N</p>
+                </div>
+                <div>
+                    <span class="param-label">Horizontal Z:</span>
+                    <p>Velocity: <span id="zVelocity" class="value-display">0.00</span> m/s</p>
+                    <p>Acceleration: <span id="zAcceleration" class="value-display">0.0000</span> m/s²</p>
+                    <p>Position: <span id="zPosition" class="value-display">0.00</span> m</p>
+                    <p>Z Air Resistance: <span id="zAirResistance" class="value-display">0.00</span> N</p>
+                    <p>Wind Z Force: <span id="windZForce" class="value-display">0.00</span> N</p>
+                </div>
+                <div>
+                    <span class="param-label">Rotational:</span>
+                    <p>Angular Velocity X: <span id="angularVelocityX" class="value-display">0.00</span> rad/s</p>
+                    <p>Angular Velocity Y: <span id="angularVelocityY" class="value-display">0.00</span> rad/s</p>
+                    <p>Angular Velocity Z: <span id="angularVelocityZ" class="value-display">0.00</span> rad/s</p>
+                    <p>Angular Acceleration X: <span id="angularAccelerationX" class="value-display">0.00</span> rad/s²
+                    </p>
+                    <p>Angular Acceleration Y: <span id="angularAccelerationY" class="value-display">0.00</span> rad/s²
+                    </p>
+                    <p>Angular Acceleration Z: <span id="angularAccelerationZ" class="value-display">0.00</span> rad/s²
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+    {{-- Sweet Alert JS Cdn --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
