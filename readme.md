@@ -65,11 +65,11 @@ Live at https://parachute-fall-threejs.vercel.app/ (Under Proccessing)
 ## 🛠️ Technologies Used
 
 - [Three.js](https://threejs.org/) → Rendering the 3D environment  
-- **Blender + GIS** → Terrain modeling from Google Maps (Italian countryside with buildings & roads)  
+- **[Blender Software](https://www.blender.org/) + GIS** → Terrain modeling from Google Maps (Italian countryside with buildings & roads)  
 - [Sky Shader (Three.js)](https://threejs.org/docs/?q=Sky#examples/en/objects/Sky) → Realistic atmospheric skybox with sun & lighting simulation  
 - **Custom Cloud Shader** → Dynamic clouds with adjustable density & coverage  
 - **3D Models** → Airplane, parachute, and skydiver models  
-- **[Mixamo](https://www.mixamo.com/) + Blender** → Animations for skydiver movements, processed & sequenced  
+- **[Mixamo](https://www.mixamo.com/) + [Blender Software](https://www.blender.org/)** → Animations for skydiver movements, processed & sequenced  
 - [Raycaster (Three.js)](https://threejs.org/docs/#api/en/core/Raycaster) → Collision detection for head, hands, and feet with terrain  
 - [Sound Effects from Pixabay](https://pixabay.com/) → Immersive audio for realism  
 
